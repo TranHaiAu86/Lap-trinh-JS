@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính lãi suất ngân hàng</title>
+</head>
+<body>
+  <script>
+      var a = prompt("nhập số tiền gửi: ");
+      var aint = parseInt(a);
+      var b = prompt("nhập lãi suất tiền gửi (%): ");
+      var bfloat = parseFloat(b);
+      var c = prompt("nhập số năm gửi: ");
+      var cint = parseInt(c);
+      var d = aint + cint * aint * bfloat;
+      document.write("số tiền cả gốc lẫn lãi: " + d);  
+  </script>
+  </body>
+</html>
