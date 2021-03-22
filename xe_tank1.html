@@ -16,7 +16,7 @@
 <div style="border: 1px solid black; height: 190px; width: 190px; background-color: black;">
     <img id="tank"
   src="tank.png"
-  style="position: relative; top: 0px; left: 0px;transform: rotate(0deg)"
+  style="position: relative; top: 0px; left: 0px"
   width="19px"
   height="19px">
 </div>
@@ -53,8 +53,8 @@
         })
 
         document.getElementById('phai').addEventListener('click', function(){
-            let quay_sang_phai = document.getElementById('tank'); 
-                quay_sang_phai.style.transform = rotate(90deg);
+            //let quay_sang_phai = document.getElementById('tank'); 
+                //quay_sang_phai.style.transform = rotate(90deg);
                 
         
             let di_chuyen_sang_phai = document.getElementById('tank').style["left"]; //di_chuyen_sang_phai = 0px
