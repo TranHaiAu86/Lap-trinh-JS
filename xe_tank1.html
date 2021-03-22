@@ -16,7 +16,7 @@
 <div style="border: 1px solid black; height: 190px; width: 190px; background-color: black;">
     <img id="tank"
   src="tank.png"
-  style="position: relative; top: 0px; left: 0px"
+  style="position: relative; top: 0px; left: 0px;transform: rotate(0deg)"
   width="19px"
   height="19px">
 </div>
@@ -53,16 +53,25 @@
         })
 
         document.getElementById('phai').addEventListener('click', function(){
-            //let quay_sang_phai = document.getElementById('tank'); 
-                //quay_sang_phai.style.transform = rotate(90deg);
-                
-        
-            let di_chuyen_sang_phai = document.getElementById('tank').style["left"]; //di_chuyen_sang_phai = 0px
-            di_chuyen_sang_phai = parseInt(di_chuyen_sang_phai); // di_chuyen_sang_phai = 0
-            di_chuyen_sang_phai = di_chuyen_sang_phai + 19;
-        document.getElementById('tank').style["left"] = di_chuyen_sang_phai + "px";
-        })
+            let quay_sang_phai = document.getElementById('tank'); 
+            if (quay_sang_phai.style["transform"] = "rotate(0deg)")
+                {quay_sang_phai.style["transform"] = "rotate(90deg)"}
+            if (quay_sang_phai.style["transform"] = "rotate(180deg)")
+                {quay_sang_phai.style["transform"] = "rotate(270deg)"}
+            if (quay_sang_phai.style["transform"] = "rotate(90deg)")
+                {quay_sang_phai.style["transform"] = "rotate(90deg)"}
+            if (quay_sang_phai.style["transform"] = "rotate(270deg)")
+                {quay_sang_phai.style["transform"] = "rotate(180deg)"}
+                let di_chuyen_sang_phai = document.getElementById('tank').style["left"]; //di_chuyen_sang_phai = 0px
+                di_chuyen_sang_phai = parseInt(di_chuyen_sang_phai); // di_chuyen_sang_phai = 0
+                di_chuyen_sang_phai = di_chuyen_sang_phai + 19;
+                document.getElementById('tank').style["left"] = di_chuyen_sang_phai + "px";
+              
+            })
+            
 
+                
+           
         document.getElementById('trai').addEventListener('click', function(){
             let di_chuyen_sang_trai = document.getElementById('tank').style["left"]; //di_chuyen_sang_trai = 0px
             di_chuyen_sang_trai = parseInt(di_chuyen_sang_trai); // di_chuyen_sang_trai = 0
