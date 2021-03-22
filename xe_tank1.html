@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, td {border-collapse: collapse;} 
+        table {width: 190px;}
+        td {width: 63,3px;}
+        input {width: 100%;}
+    </style>
+</head>
+<body>
+<div style="border: 1px solid black; height: 190px; width: 190px; background-color: black;">
+    <img id="tank"
+  src="tank.png"
+  style="position: relative; top: 0px; left: 0px;transform: rotate(0deg)"
+  width="19px"
+  height="19px">
+</div>
+<table>
+    <tr>
+        <td></td>
+        <td><input id="len" type="button" value = "up" style="color: crimson;"/></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><input id="trai" type="button" value = "left" style="color: crimson;"/></td>
+        <td></td>
+        <td><input id="phai" type="button" value = "right" style="color: crimson;"/></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><input id="xuong" type="button" value = "down" style="color: crimson;"/></td>
+        <td></td>
+    </tr>
+    <script>
+
+        document.getElementById('len').addEventListener('click', function(){
+            let di_chuyen_len = document.getElementById('tank').style["top"]; //di_chuyen_len = 0px
+            di_chuyen_len = parseInt(di_chuyen_len); // di_chuyen_len = 0
+            di_chuyen_len = di_chuyen_len -19;
+        document.getElementById('tank').style["top"] = di_chuyen_len + "px";
+        })
+        
+        document.getElementById('xuong').addEventListener('click', function(){
+            let di_chuyen_xuong = document.getElementById('tank').style["top"]; //di_chuyen_xuong = 0px
+            di_chuyen_xuong = parseInt(di_chuyen_xuong); // di_chuyen_xuong = 0
+            di_chuyen_xuong = di_chuyen_xuong + 19;
+          document.getElementById('tank').style["top"] = di_chuyen_xuong + "px";
+        })
+
+        document.getElementById('phai').addEventListener('click', function(){
+            let quay_sang_phai = document.getElementById('tank'); 
+                quay_sang_phai.style.transform = rotate(90deg);
+                
+        
+            let di_chuyen_sang_phai = document.getElementById('tank').style["left"]; //di_chuyen_sang_phai = 0px
+            di_chuyen_sang_phai = parseInt(di_chuyen_sang_phai); // di_chuyen_sang_phai = 0
+            di_chuyen_sang_phai = di_chuyen_sang_phai + 19;
+        document.getElementById('tank').style["left"] = di_chuyen_sang_phai + "px";
+        })
+
+        document.getElementById('trai').addEventListener('click', function(){
+            let di_chuyen_sang_trai = document.getElementById('tank').style["left"]; //di_chuyen_sang_trai = 0px
+            di_chuyen_sang_trai = parseInt(di_chuyen_sang_trai); // di_chuyen_sang_trai = 0
+            di_chuyen_sang_trai = di_chuyen_sang_trai - 19;
+          document.getElementById('tank').style["left"] = di_chuyen_sang_trai + "px";
+        })
+
+    </script>
+</table>
+</body>
+</html>

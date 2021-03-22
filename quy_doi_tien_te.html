@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <style>
+        table, td {border-collapse: collapse;}  
+        select {width: 100%;}
+        input {width: 200px;}
+        body {background-color: burlywood;}
+    </style>
+    <h1>Chuyển đổi tiền tệ</h1>
+    <table style="width: 700px; height: 40px;">
+    <tr>
+        <td><center><strong>Amount</center></strong></td>;
+        <td><center><strong>From Currency</center></strong></td>;
+        <td><center><strong>To Currency</center></strong></td>;
+        <td></td>
+    </tr>
+    <tr>
+        <td><input type="number" id="so_tien" style="background-color: rgb(173, 201, 141);"/></td>;
+        <td><select id="dong_tien_te_1" style="background-color: rgb(173, 201, 141);">
+                <option id="vn1" value="vietnam_1">VietNam</option>;
+                <option id="usd1" value="usd_1">USD</option>;
+        </select></td>
+        <td><select id="dong_tien_te_2" style="background-color: rgb(173, 201, 141);">
+                 <option id="usd2" value="usd_2">USD</option>;
+                 <option id="vn2" value="vietnam_2">VietNam</option>;
+            </select></td>
+        <td><input type="button" id="quy_doi" value="Convert" style="background-color: rgb(174, 174, 211);"/></td>
+    </tr>
+    </table>
+    <br>
+    <p id="ket_qua">Kết quả quy đổi: </p>
+    <script>
+        var quy_doi_tien = document.getElementById('quy_doi');
+        quy_doi_tien.addEventListener('click', function(){
+        var gia_tri_tien = document.getElementById('so_tien').value;
+        //xử lý số liệu
+            gia_tri_tien = gia_tri_tien * 1;
+        var a = document.getElementById('dong_tien_te_1').value;
+        var b = document.getElementById('dong_tien_te_2').value;
+        if (a == "vietnam_1" && b == "usd_2")
+            {var ket_qua_quy_doi = gia_tri_tien / 23000;
+            document.getElementById('ket_qua').innerHTML = "Kết quả quy đổi: " + ket_qua_quy_doi + " USD";}
+        if (a == "usd_1" && b == "vietnam_2")
+            {var ket_qua_quy_doi = gia_tri_tien * 23000;
+            document.getElementById('ket_qua').innerHTML = "Kết quả quy đổi: " + ket_qua_quy_doi + " VND";}
+        if (a == "vietnam_1" && b == "vietnam_2")
+            {var ket_qua_quy_doi = gia_tri_tien;
+            document.getElementById('ket_qua').innerHTML = "Kết quả quy đổi: " + ket_qua_quy_doi + " VND";}
+        if (a == "usd_1" && b == "usd_2")
+            {var ket_qua_quy_doi = gia_tri_tien;
+            document.getElementById('ket_qua').innerHTML = "Kết quả quy đổi: " + ket_qua_quy_doi + " USD";}
+        })
+
+    </script>
+
+
+</body>
+</html>

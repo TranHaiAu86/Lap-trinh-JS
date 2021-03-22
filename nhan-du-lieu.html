@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <form>
+    Nhap_so_a: <input type="number" id="so_a"></input>
+    Nhap_so_b: <input type="number" id="so_b"></input>
+    <br>
+    tong_2_so: <input type="button" id="tong" value="tong_2_so"></input>
+</form>
+    <script>
+        // truy xuất đến phần tử có Id=tong
+         var tong_a_b = document.getElementById('tong');
+         // bắt sự kiện khi click sẽ chạy hàm function
+         // lưu ý nếu để dòng code bắt sự kiện này vào vị trí cuối khối sẽ xuất ra màn hình tổng 2 số là 0 vì dòng lệnh chạy từ trên xuống.
+         tong_a_b.addEventListener('click', function()
+          {
+          var a = document.getElementById('so_a').value;
+          var b = document.getElementById('so_b').value; 
+          //xử lý dữ liệu để đảm bảo a, b là số thực
+         var a = a * 1;
+         var b = b * 1;
+         var sum = a + b;
+         document.write("tổng 2 số là: " + sum);
+          })
+    </script>
+    
+</body>
+</html>
