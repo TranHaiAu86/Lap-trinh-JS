@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     Chỉ số cân nặng (kg): <input type="number" id="can_nang"/>
+     Chỉ số chiều cao (m): <input type="number" id="chieu_cao"/>
+    <input type="button" id="kiem_tra" value="Kiểm tra"/>
+    <script>
+        document.getElementById('kiem_tra').addEventListener('click', function(){
+            var can_nang = document.getElementById('can_nang').value;
+            var chieu_cao = document.getElementById('chieu_cao').value;
+            var can_nang = parseFloat(can_nang);
+            var chieu_cao = parseFloat(chieu_cao);
+            var BMI = can_nang / (chieu_cao * chieu_cao);
+            if (BMI < 16)
+                {alert('Gầy độ III');
+                 } else if (BMI < 17)
+                {alert('Gầy độ II');
+                 } else if (BMI < 18.5)
+                {alert('Gầy độ I');
+                 } else if (BMI < 25)
+                 {alert('Bình thường');
+                } else if (BMI < 30)
+                 {alert('Thừa cân');
+                 } else if (BMI < 35)
+                {alert('Béo phì độ I');
+                 } else if (BMI < 40)
+                {alert('Béo phì độ II');
+            } else
+                {alert('Béo phì độ III')}
+        })
+
+    </script>
+
+
+</body>
+</html>
