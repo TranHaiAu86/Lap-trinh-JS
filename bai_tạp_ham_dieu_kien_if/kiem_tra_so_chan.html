@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Nhập số</p>
+    <table>
+        <tr>
+            <td><input type="number" id="so_nhap_vao"/></td>
+            <td><input type="button" id="kiem_tra" value="Kiểm tra"/></td>
+        </tr>
+    </table>
+    <script>
+        document.getElementById('kiem_tra').addEventListener('click', function(){
+        let gia_tri = document.getElementById('so_nhap_vao').value;
+        if (gia_tri % 2 == 0)
+            {alert(gia_tri + " là một số chẵn")}
+        else {alert(gia_tri + " là một số lẻ")}
+        })
+    </script>
+</body>
+</html>
