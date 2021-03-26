@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, td {border-collapse: collapse;} 
+        input {width: 100%;}
+    </style>
+</head>
+<body>
+    <table border="4">
+        <tr>
+            <td colspan="4"><input type="text" id="man_hinh_hien_thi"/></td>
+            <br> 
+        </tr>
+          
+        <tr>
+            <td><input type="button" value="1" onclick="nhap_1()"/></td>
+            <td><input type="button" value="2" onclick="nhap_2()"/></td>
+            <td><input type="button" value="3" onclick="nhap_3()"/></td>
+            <td><input type="button" value="+" onclick="nhap_dau_cong()"/></td>
+        </tr>
+
+        <tr>
+            <td><input type="button" value="4" onclick="nhap_4()"/></td>
+            <td><input type="button" value="5" onclick="nhap_5()"/></td>
+            <td><input type="button" value="6" onclick="nhap_6()"/></td>
+            <td><input type="button" value="-" onclick="nhap_dau_tru()"/></td>
+        </tr>
+
+        <tr>
+            <td><input type="button" value="7" onclick="nhap_7()"/></td>
+            <td><input type="button" value="8" onclick="nhap_8()"/></td>
+            <td><input type="button" value="9" onclick="nhap_9()"/></td>
+            <td><input type="button" value="x" onclick="nhap_dau_nhan()"/></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="C" onclick="nhap_C()"/></td>
+            <td><input type="button" value="0" onclick="nhap_0()"/></td>
+            <td><input type="button" value="=" onclick="nhap_dau_bang()"/></td>
+            <td><input type="button" value="/" onclick="nhap_dau_chia()"/></td>
+        </tr>  
+    </table>
+    <script>
+        function nhap_1() {
+            document.getElementById('man_hinh_hien_thi').value += 1; 
+        }
+        function nhap_2() {
+            document.getElementById('man_hinh_hien_thi').value += 2; 
+        }
+        function nhap_3() {
+            document.getElementById('man_hinh_hien_thi').value += 3; 
+        }
+        function nhap_dau_cong() {
+            document.getElementById('man_hinh_hien_thi').value += "+"; 
+        }
+        function nhap_4() {
+            document.getElementById('man_hinh_hien_thi').value += 4; 
+        }
+        function nhap_5() {
+            document.getElementById('man_hinh_hien_thi').value += 5; 
+        }
+        function nhap_6() {
+            document.getElementById('man_hinh_hien_thi').value += 6; 
+        }
+        function nhap_dau_tru() {
+            document.getElementById('man_hinh_hien_thi').value += "-"; 
+        }
+        function nhap_7() {
+            document.getElementById('man_hinh_hien_thi').value += 7; 
+        }
+        function nhap_8() {
+            document.getElementById('man_hinh_hien_thi').value += 8; 
+        }
+        function nhap_9() {
+            document.getElementById('man_hinh_hien_thi').value += 9; 
+        }
+        function nhap_dau_nhan() {
+            document.getElementById('man_hinh_hien_thi').value += "*"; 
+        }
+        function nhap_C() {
+            document.getElementById('man_hinh_hien_thi').value = "" ; 
+        }
+        function nhap_0() {
+            document.getElementById('man_hinh_hien_thi').value += 0; 
+        }
+        function nhap_dau_bang() {
+            let ket_qua = eval(document.getElementById('man_hinh_hien_thi').value);
+            document.getElementById('man_hinh_hien_thi').value = ket_qua;
+        }
+        function nhap_dau_chia() {
+            document.getElementById('man_hinh_hien_thi').value += "/"; 
+        }
+       
+    </script>
+
+</body>
+</html>
