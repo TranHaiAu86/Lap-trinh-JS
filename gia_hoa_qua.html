@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giá hoa quả</title>
+</head>
+<body>
+   <form>
+        <table>
+            <tr>
+                <td>
+                    <select id="loai_trai_cay">
+                       <option>Ổi</option>;
+                       <option>Dưa hấu</option>;
+                       <option>Táo</option>;
+                       <option>Xoài</option>;
+                       <option>Cam</option>;
+                       <option>Chôm chôm</option>;
+                       <option>Măng cụt</option>;
+                    </select>
+                </td>
+                <td><input type="button" value="Xem giá" id="gia"/></td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        document.getElementById('gia').addEventListener('click', function(){
+            let trai_cay_chon = document.getElementById('loai_trai_cay').value;
+            switch (trai_cay_chon) {
+                case 'Ổi':              
+                case 'Dưa hấu':
+                    document.write('20.000 VNĐ/kg');
+                    break;
+                case 'Táo':
+                case 'Xoài':
+                    document.write('30.000 VNĐ/kg');
+                    break;
+                case 'Cam':
+                case 'Chôm Chôm':
+                    document.write('40.000 VNĐ/kg');
+                    break;
+                default:
+                    document.write('50.000 VNĐ/kg');
+                    break;
+            }
+        })
+    </script>
+  
+</body>
+</html>
