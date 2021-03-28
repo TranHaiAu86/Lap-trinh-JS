@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, td {border-collapse: collapse;} 
+        table {width: 190px;}
+        td {width: 63,3px;}
+        input {width: 100%;}
+    </style>
+</head>
+<body>
+    <div style="border: 1px solid black; height: 190px; width: 190px; background-color: rgb(199, 112, 78); position: relative;">
+        <img id="tank"
+      src="tank-1.png"
+      style="position: absolute; top: 0px; left: 0px;transform: rotate(0deg)"
+      width="19px"
+      height="19px">
+         <img id="boom"
+      src="boom.png"
+      style="position: absolute; top: 95px; left: 95px;transform: rotate(0deg)"
+      width="19px"
+      height="19px">
+    </div>
+    <table>
+        <tr>
+            <td></td>
+            <td><input id="len" type="button" value = "up" style="color: crimson;"/></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input id="trai" type="button" value = "left" style="color: crimson;"/></td>
+            <td></td>
+            <td><input id="phai" type="button" value = "right" style="color: crimson;"/></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input id="xuong" type="button" value = "down" style="color: crimson;"/></td>
+            <td></td>
+        </tr>
+        <script>
+    
+            document.getElementById('len').addEventListener('click', function(){
+                let di_chuyen_len = document.getElementById('tank').style["top"]; 
+                di_chuyen_len = parseInt(di_chuyen_len); 
+                di_chuyen_len = di_chuyen_len -19;
+                let toa_do_top = document.getElementById('tank').style["top"] = di_chuyen_len + "px";
+                let toa_do_left = document.getElementById('tank').style["left"];
+                if (toa_do_top == "95px" && toa_do_left == "95px")
+                    {document.getElementById('tank').src = "explosion.png";
+                     document.getElementById('boom').src = "explosion.png";}
+            })
+            
+            document.getElementById('xuong').addEventListener('click', function(){
+                let di_chuyen_xuong = document.getElementById('tank').style["top"]; 
+                di_chuyen_xuong = parseInt(di_chuyen_xuong); 
+                di_chuyen_xuong = di_chuyen_xuong + 19;
+                let toa_do_top = document.getElementById('tank').style["top"] = di_chuyen_xuong + "px";
+                let toa_do_left = document.getElementById('tank').style["left"];
+                if (toa_do_top == "95px" && toa_do_left == "95px")
+                    {document.getElementById('tank').src = "explosion.png";
+                     document.getElementById('boom').src = "explosion.png";}
+
+            })
+            document.getElementById('phai').addEventListener('click', function(){
+                let di_chuyen_sang_phai = document.getElementById('tank').style["left"]; 
+                di_chuyen_sang_phai = parseInt(di_chuyen_sang_phai); 
+                di_chuyen_sang_phai = di_chuyen_sang_phai + 19;
+                let toa_do_left = document.getElementById('tank').style["left"] = di_chuyen_sang_phai + "px";
+                let toa_do_top = document.getElementById('tank').style["top"];
+                if (toa_do_top == "95px" && toa_do_left == "95px")
+                    {document.getElementById('tank').src = "explosion.png";
+                     document.getElementById('boom').src = "explosion.png";}
+            })
+    
+            document.getElementById('trai').addEventListener('click', function(){
+                let di_chuyen_sang_trai = document.getElementById('tank').style["left"]; 
+                di_chuyen_sang_trai = parseInt(di_chuyen_sang_trai); 
+                di_chuyen_sang_trai = di_chuyen_sang_trai - 19;
+                let toa_do_top = document.getElementById('tank').style["left"] = di_chuyen_sang_trai + "px";
+                let toa_do_left = document.getElementById('tank').style["top"];
+                if (toa_do_top == "95px" && toa_do_left == "95px")
+                    {document.getElementById('tank').src = "explosion.png";
+                     document.getElementById('boom').src = "explosion.png";}
+
+            })
+    
+        </script>
+    </table>
+    </body>>
+</html>
