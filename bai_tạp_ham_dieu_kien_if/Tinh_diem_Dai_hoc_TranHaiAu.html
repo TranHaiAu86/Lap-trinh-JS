@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính điểm thi Đại học</title>
+</head>
+<body>
+    <h1>Tính điểm ĐH khối D</h1>
+    <form>
+        Môn Toán <input type="number" id="diem_Toan"/>
+        Môn Văn <input type="number" id="diem_Van"/>
+        Môn Anh <input type="number" id="diem_Anh"/>
+        Khu vực <select id="khu_vuc">
+            <option>KV1</option>
+            <option>KV2</option>
+            <option>KV2-NT</option>
+            <option>KV3</option>
+        </select>
+        <input type="button" value="Tính điểm" id="tinh_diem"/>
+    </form>
+    <p id="ket_qua"><font color="red" size='5,5px'>Tổng điểm ĐH khối D của bạn là: </font></p>
+    <script>
+        document.getElementById('tinh_diem').addEventListener('click', function(){
+            var diem_Toan = document.getElementById('diem_Toan').value;
+            var diem_Van = document.getElementById('diem_Van').value;
+            var diem_Anh = document.getElementById('diem_Anh').value;
+            diem_Toan = parseInt(diem_Toan);
+            diem_Van = parseInt(diem_Van);
+            diem_Anh = parseInt(diem_Anh);
+            var khu_vuc = document.getElementById('khu_vuc').value;
+            switch (khu_vuc) {
+                case 'KV1':
+                    var tong_diem = diem_Toan + diem_Van + diem_Anh + 0.75;
+                    document.getElementById('ket_qua').innerHTML = "Tổng điểm ĐH khối D của bạn là: " + tong_diem;
+                    break;
+                case 'KV2':
+                    var tong_diem = diem_Toan + diem_Van + diem_Anh + 0.25;
+                    document.getElementById('ket_qua').innerHTML = "Tổng điểm ĐH khối D của bạn là: " + tong_diem;
+                    break;
+                case 'KV2-NT':
+                    var tong_diem = diem_Toan + diem_Van + diem_Anh + 0.5;
+                    document.getElementById('ket_qua').innerHTML = "Tổng điểm ĐH khối D của bạn là: " + tong_diem;
+                    break;
+                case 'KV3':
+                    var tong_diem = diem_Toan + diem_Van + diem_Anh;
+                    document.getElementById('ket_qua').innerHTML = "Tổng điểm ĐH khối D của bạn là: " + tong_diem;
+                    break;
+            }
+        })
+
+
+    </script>
+
+</body>
+</html>
