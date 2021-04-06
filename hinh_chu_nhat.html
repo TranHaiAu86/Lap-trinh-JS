@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript"
+        src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=BXDi3j6yuM16JKmnMfonsdsW67-GOLsqPe3Fr0U4gNqY09Hb5J0jzY6WNJqtCgeYEA29rqhlsLuFbOOqzJon0_XZ57AhAsag2qZPqCnnlXOZREVxuCVQJapEn1DGCYKI83oAZt3j83dMgd9Mxc2Lxt09wDwnLOSXE5uY-Gtv3T_lUL2Ow3oXtyYEOv_wzLpYgXlAct5PAJTa3KW2YUm3fclNbg9pKiVMWzdM2s3NAXJbZEd69AdoFP3WisJKVMH3tF8Lx7PaVvIofmyDAEvRDMijIEifV63QepjXvcq4A7Mw6zFPISf_wxSkc7nUyRFuN60-sR3UGxIf09_AoSci5tELDT_RG1nrHjHwhBgQ4HH6Eys5hDhcTgHue2i8lUGHKakVwUZbfx4npRVuODIAihtN8yEKiW1G_Wq6KHL-eyy6DMknacYEZY9sA8__4oBvkra7xXRjKPDPQPeUaxoIDKNeN9RF3EgS8d_GJlLoFvJqmDCwZ0jtSAvK84FsG6JgpyPBrZ_2M3GvU7gGwcJ36MGS9gu-4BKPoCtt-TCOmDdsILshte6Fg7R6XYbuCB1yH8MMPk9fM3pCPrUM0WYvqkih-G1Vwk28ZSGtNFZyHouU_2QkFi93yLoh5DFzHy1LqngJMUe_-AzWdvXJQhKY9q7dBPotP2hFS4gnAYZVBcuCTcwsWGWhSQZ1hJGZsKwyFB4m71yx4BSkAH6j39hiO6hLyPDg8n1h9RwReXmGWdU9koFrmeF4UE9nsWnwnzx4g3UTf0vvP4GI5GPNEEl9GJIQO2TUmyrw4ewwFG-qz6Jj2LdqOUL5GrhUHxY8hfKWud3klIR-J6Fl-Pl_OYmr5tVmFEdC_Azjf1CmIfYu8_mcZ7H3BuXv36sxwROiW46ff-CAUN9gLFVNNt5FZSF4wlp5ySPcyFhDF2QhodKEn0qT8jGFknzHwnvwMAPzyUuqpWgoj1D6woNfyy9DWk1vKaxCxznM2x_r6mYTxGEaxA31-ejABB01DsHwmFDujy7GW0UDxDVVD2COtFd59R9y-WCKlzcs_q4OmlNVtFJC-Y3U7eh3IeGS7UHomE5TpgjdtlAdRId5ipQBLDYPFPxW5EFB9tEMfEQrqKlKzkjFgqqk4opkjP9va-wW-8HHUYoNIy30d5tgSOUl5dKGcD9kmTVyrNZGSHvEzQZrdbQypoghTiJwD2008-_9fIN1Ch3Ct0Mi2GtvOIOh0qkotZGSzw"
+        nonce="9f526ae0aed3cf3a42a172576a255850" charset="UTF-8"></script>
+</head>
+
+<body>
+
+    <script>
+        //đoạn code xử lý yêu cầu in ra 5 hàng dấu * chồng lên nhau
+        /* var j = 1;
+        while (j <= 5) {
+        var i = 1;
+        while (i <= 10) {
+            document.write('*');
+            i++;
+        }
+        document.write('<br>');
+            j++;
+        }
+        */
+        //đoạn code xử lý yêu cầu hỏi chiều cao, chiều rộng trước khi in
+        /*var j = 1;
+        var k = prompt('chọn chiều cao in (số lượng dấu *): ');
+        var l = prompt('chọn chiều rộng in (số lượng dấu *): ');
+        while (j <= k) {
+            var i = 1;
+            while (i <= l) {
+                document.write('*');
+                i++;
+            }
+            document.write('<br>');
+            j++;
+        }
+        */
+        //đoạn code xử lý yêu cầu chọn ký tự trước khi in
+        /*var j = 1;
+        var k = prompt('chọn ký tự in: ');
+        while (j <= 5) {
+            var i = 1;
+            while (i <= 10) {
+                document.write(k);
+                i++;
+            }
+            document.write('<br>');
+            j++;
+        }
+        */
+        //đoạn code xử lý yêu cầu in hình chữ nhật rỗng
+        var k = 1;
+        while (k <= 5) {
+            var i = 1;
+            while (i <= 10) {
+
+                if (k > 1 && k < 5 && i > 1 && i < 10) {
+                    document.write('<span style="color:white;">*</span>')
+                }
+                else {
+                    document.write('*');
+                }
+                i++;
+            }
+            document.write('<br>');
+            k++;
+        }
+
+
+    </script>
+
+</body>
+
+</html>
