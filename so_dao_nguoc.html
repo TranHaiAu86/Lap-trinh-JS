@@ -16,9 +16,13 @@
         var so_dao_nguoc = 0;
 
         while (a > 0) {
+            //chia lấy phần dư
             phan_du = a % 10;
+            //thiết lập lần lượt số đảo ngược
             so_dao_nguoc = so_dao_nguoc * 10 + phan_du;
+            //chia lấy phần nguyên
             phan_nguyen = Math.floor(a / 10);
+            //gán lại số a để tạo vòng lặp
             a = phan_nguyen;
         }
         document.write(so_dao_nguoc);
